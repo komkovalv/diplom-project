@@ -1,12 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const BookMark = ({ status, onToggleBookmark, id }) => {
+const BookMark = ({ status, ...rest }) => {
     return (
-        <button
-            className="btn btn-outline-primary"
-            onClick={() => onToggleBookmark(id)}
-        >
+        <button className="btn btn-outline-primary" {...rest}>
             <i
                 className={
                     "bi bi-emoji" + (status ? "-heart-eyes-fill" : "-neutral")
@@ -16,8 +13,6 @@ const BookMark = ({ status, onToggleBookmark, id }) => {
     );
 };
 BookMark.propTypes = {
-    status: PropTypes.bool,
-    id: PropTypes.string.isRequired,
-    onToggleBookmark: PropTypes.func.isRequired
+    status: PropTypes.bool
 };
 export default BookMark;
