@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { paginate } from "../utils/pagination";
 import "bootstrap/dist/css/bootstrap.css";
-import Pagination from "./pagination";
+import Pagination from "../components/pagination";
 import PropTypes from "prop-types";
-import GroupList from "./groupList";
-import API from "../api";
-import SearchStatus from "./searchStatus";
-import UserTable from "./usersTable";
+import GroupList from "../components/groupList";
+import API from "..";
+import SearchStatus from "../components/searchStatus";
+import UserTable from "../components/usersTable";
 import _ from "lodash";
+
 
 const Users = () => {
     const pageSize = 8;
@@ -92,7 +93,6 @@ const Users = () => {
                             selectedSort={sortBy}
                             onDelete={handleDelete}
                             onToggleBookMark={handleToggleBookMark}
-                           
                         />
                     )}
                     <div className="d-flex justify-content-center">
@@ -107,7 +107,7 @@ const Users = () => {
             </div>
         );
     }
-    return "loading..."
+    return "loading...";
 };
 Users.propTypes = {
     users: PropTypes.arrayOf(PropTypes.object)
