@@ -1,5 +1,5 @@
 import React from "react";
-import Quality from "./quality";
+import Quality from "./ui/qualities/quality";
 import PropTypes from "prop-types";
 
 const QualitieList = ({ qualities }) => {

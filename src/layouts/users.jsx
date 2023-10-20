@@ -5,8 +5,8 @@ import Pagination from "../components/pagination";
 import PropTypes from "prop-types";
 import GroupList from "../components/groupList";
 import API from "..";
-import SearchStatus from "../components/searchStatus";
-import UserTable from "../components/usersTable";
+import SearchStatus from "../components/ui/searchStatus";
+import UserTable from "../components/ui/usersTable";
 import _ from "lodash";
 
 const Users = () => {

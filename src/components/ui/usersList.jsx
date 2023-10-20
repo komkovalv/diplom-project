@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import API from "..";
-import QualitiesList from "../components/qualitiesList";
+import API from "../..";
+import QualitiesList from "./qualities/qualitiesList";
 
 const User = () => {
     const [user, setUser] = useState();
@@ -13,11 +13,10 @@ const User = () => {
         return <div>loading...</div>;
     }
     function getProfessionById(userId) {
-        return API.professions[userId]||"undf";
-      }
-      const profession = getProfessionById(userId);
-  console.log(profession)
-    
+        return API.professions[userId] || "undf";
+    }
+    const profession = getProfessionById(userId);
+    console.log(profession);
 
     const history = useHistory();
     const handleClick = () => {
